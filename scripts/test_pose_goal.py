@@ -37,12 +37,14 @@ def main(args=None):
         # Plan and execute
         moveit2.plan_kinematic_path()
         moveit2.execute()
+        moveit2.get_logger().info("Pose A reached!")
         time.sleep(5)
         joint_positions = [0.0,0.0,0.0,0.0,0.0,0.0]
         moveit2.set_joint_goal(joint_positions)
         # Plan and execute
         moveit2.plan_kinematic_path()
         moveit2.execute()
+        moveit2.get_logger().info("Pose B reached!")
         time.sleep(5)
    
     rclpy.shutdown()
