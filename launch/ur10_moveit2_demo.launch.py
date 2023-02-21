@@ -51,5 +51,5 @@ def generate_launch_description():
              arguments=["--display-config", rviz2_config])   
 
     return LaunchDescription([
-        robot_state_publisher,static_transform_publisher,move_group,rviz2
+        robot_state_publisher,static_transform_publisher,move_group#,rviz2
     ])
